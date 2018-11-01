@@ -1,0 +1,47 @@
+### ========= customers=========
+GET http://localhost:3000/customers
+Authorization: jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YmRhYzJiOWY2MzU2OTgwNmM2ZDY2ZGIiLCJlbWFpbCI6IjY0NTkzNjQ2OEBxcS5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCRkNFh6Z0QxNWlkSEJ3Qk5hU3ZqdGpPWlNHeGtmTG5wRHZGc3ZKRmdTY3hPS002ZjVPSmhiNiIsIl9fdiI6MCwiaWF0IjoxNTQxMDY0ODYxLCJleHAiOjE1NDEwNjU3NjF9.VT55nU28R4yoHkoH54jUVPCBLuP9KroFM4u3I7I5HlA
+
+###
+POST http://localhost:3000/customers
+Content-Type: application/json
+
+{
+  "name": "zyan",
+  "email": "test@163.com",
+  "balance": 19800
+}
+
+###
+PUT http://localhost:3000/customers/5bdabcf40c539d943864eece
+Content-Type: application/json
+
+{
+  "name": "updated",
+  "email": "updated@163.com",
+  "balance": 200
+}
+
+###
+DELETE http://localhost:3000/customers/5bdabcf40c539d943864eece
+
+### ========= users =========
+POST http://localhost:3000/register HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "645936468@qq.com",
+  "password": "zhaoyan123"
+}
+
+### 
+POST http://localhost:3000/auth HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "645936468@qq.com",
+  "password": "zhaoyan123"
+}
+
+
+
